@@ -1,8 +1,7 @@
-package com.lab.rabbit.service;
+package com.lab.rabbit.consumer.service;
 
 
 import com.lab.rabbit.Exceptions.ExceptionInvalidEmail;
-import com.lab.rabbit.consumer.service.SendEmailService;
 import com.lab.rabbit.model.MetaDataEmail;
 import jakarta.mail.MessagingException;
 import org.junit.jupiter.api.Assertions;
