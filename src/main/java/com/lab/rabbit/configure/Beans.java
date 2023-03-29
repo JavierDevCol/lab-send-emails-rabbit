@@ -20,6 +20,7 @@ public class Beans {
 
     @Value("${jasypt.encryptor.password}")
     private String passEncryptor;
+
     @Bean
     public ConnectionFactory connectionFactory() {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
@@ -36,7 +37,7 @@ public class Beans {
         return new EmailMessageConverter();
     }
 
-    @Bean()
+    @Bean
     @Qualifier("miEncryptor")
     public StringEncryptor stringEncryptor() {
         StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();

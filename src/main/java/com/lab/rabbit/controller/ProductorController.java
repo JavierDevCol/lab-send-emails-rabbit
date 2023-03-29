@@ -14,14 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductorController {
 
     private final Logger log = LoggerFactory.getLogger(ProductorController.class);
-    private final MyService myService;
-    public ProductorController(MyService myService) {
-        this.myService = myService;
+    private final MyService myServiceImpl;
+
+    public ProductorController(MyService myServiceImpl) {
+        this.myServiceImpl = myServiceImpl;
     }
 
     @PostMapping
     public void sendMessagge(@RequestBody Email email) {
         log.info("Objecto recibi)o: {}", email.toString());
-        this.myService.sendEmail(email);
+        this.myServiceImpl.sendEmail(email);
     }
 }
