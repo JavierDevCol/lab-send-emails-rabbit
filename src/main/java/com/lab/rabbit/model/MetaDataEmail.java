@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Email {
+public class MetaDataEmail {
     private String to;
     private String subject;
     private String body;

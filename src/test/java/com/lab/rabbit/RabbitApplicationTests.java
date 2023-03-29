@@ -10,4 +10,5 @@ class RabbitApplicationTests {
     void contextLoads() {
     }
 
+
 }
